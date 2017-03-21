@@ -31,32 +31,71 @@
 
 			</div>
 		</header>
-		<div class="table">
+		<div class="contact">
 		  <br/>
-			<h1>&nbsp; &nbsp; Contact Us</h1>
 			<br/>
+			<div id="contus">
+<img src="image/contactus.png" alt="contactus" width="450px" height="450px">
+</div>
 				<form name="contactForm" action="http://webdevfoundations.net/scripts/formdemo.asp"" onsubmit="return validateForm();" method="post">
-					<table border="0">
-						<tr>
-							<td align="right">Your Name:</td> <td><input type="text" name="custName" id="custName"></td>
-						</tr>
-						<tr>
-							<td align="right">E-mail:</td> <td><input type="text" name="custEmail" id="custEmail"></td>
-						</tr>
-						<tr>
-							<td align="right">Message Subject:</td> <td><input type="text" name="subject" id="subject"></td>
-						</tr>
-						<tr>
-							<td align="right" valign="top">Message:</td>
-						<td><textarea name="comments" id="comments" rows="10" cols="50"></textarea></td>
-						</tr>
-						<tr>
-							<td>&nbsp;</td>
-							<td><input type="submit" value="Contact"> &nbsp; <input type="reset"></td>
-						</tr>
-					</table>
-				</form>
-		</div>
+					<fieldset>
+						<label for="txtFirstName"><span class="question">Name</span><span class="star">&nbsp;*</span></label>
+						<br>
+						<div id="fn">
+						<input id="txtFirstName" type="text" name="firstname">
+                        <span>First</span>	
+                        </div>
+						<div id="ln">
+						<input id="txtLastName" type="text" name="lastname">
+						<span>Last</span>
+						</div>
+					</fieldset>
+					<fieldset>
+                     <label><span class="gender"><span class="question">Gender</span><span class="star">&nbsp;*</span></label>
+                     <br><input id="gender_1" type="radio" name="gender" value="Yes"> <label for="gender_1">Yes</label>
+                     <input id="gender_0" type="radio" name="gender" value="No"> <label for="gender_0">No</label>
+                  </fieldset>
+				  <fieldset>
+                     <label for="txtEmail"><span class="question">Email Address</span><span class="star">&nbsp;*</span></label>
+                     <br><input id="txtEmail" type="text" name="email">
+                  </fieldset>
+				  <fieldset>
+                     <label for="txtPhone_0"><span class="question">Phone</span><span class="star">&nbsp;*</span></label>
+                     <br>
+                     <div id="First3">
+                        <input id="txtPhone_0" onchange = "warnPhone_0Invalid('txtPhone_0')" type="text" name="fst3" maxlength="3">&nbsp;-
+                        <span>(***)</span>
+                     </div>
+                     <div id="Second3">
+                        <input id="txtPhone_1" onchange = "warnPhone_1Invalid('txtPhone_1')" type="text" name="scd3" maxlength="3">&nbsp;-
+                        <span>***</span>
+                     </div>
+                     <div id="Last4">
+                        <input id="txtPhone_2" onchange = "warnPhone_2Invalid('txtPhone_2')" type="text" name="lst4" maxlength="4">
+                        <span>****</span>
+                     </div>
+                  </fieldset>
+				  <fieldset>
+                     <label for="selPosition"><span class="question">Which flavor are you interested in?</span><span class="star">&nbsp;*</span></label>
+                     <br>
+                     <select id="selPosition">
+					    <option value="blank">-- Select an opition --</option>
+                        <option value="sour">Sour</option>
+                        <option value="sweet">Sweet</option>
+                        <option value="bitter">Bitter</option>
+                        <option value="spicy">Spicy</option>
+						<option value="salty">Salty</option>
+                     </select>
+                  </fieldset>
+				  <fieldset>
+                     <div id="inf">
+                        <label for="taComments"><span class="question">Any additional information for us</span></label>
+                        <br><textarea id="taComments" rows="10" cols="50"></textarea>
+                        <br><br><input type="submit">
+                     </div>
+                  </fieldset>
+			</div>
+			
 		<footer>
 			<P id="copyright"><a href="Sitemap.html">Site Map</a></P>
 			</br>

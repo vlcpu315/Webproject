@@ -156,20 +156,6 @@ text-align:left;
 p {
 	text-align:left;
 }
-
-.table {
-	width: 600;
-	height:600;
-	margin-left:auto;
-	margin-right:auto;
-	display: block;
-	position:relative;
-	padding-top: 10%;
-	padding-left: 20%;
-	padding-bottom:20%;
-	
-}
-
 footer {
 	width: 100%;
 	position:relative;
@@ -191,3 +177,31 @@ footer {
 #copyright a:hover{
 	background-color: #0099CC;
 }
+fieldset{border-style:none;}
+.star {color:red;}
+.question {font-weight:bold;}
+#fn{display:inline-block;}
+#ln{display:inline-block;}
+#fn span{display:block;
+font-size:xx-small;}
+#ln span{display:block;
+font-size:xx-small;}
+#txtEmail{width:400px;}
+#txtPhone_0{width:25px;}
+#txtPhone_1{width:25px;}
+#txtPhone_2{width:35px;}
+#First3{display:inline-block;}
+#First3 span{display:block;
+font-size:xx-small;}
+#Second3{display:inline-block;}
+#Second3 span{display:block;
+font-size:xx-small;}
+#Last4{display:inline-block;}
+#Last4 span{display:block;
+font-size:xx-small;}
+#selPosition{width:270px}
+#inf span{color:green;}
+input#taComments{width:300px;}
+span{font-family: Arial, Helvetica, sans-serif;}
+#contus{float:right;
+padding-top:50px;}
