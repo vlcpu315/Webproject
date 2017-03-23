@@ -70,17 +70,26 @@ function validateForm(){
 	var reg1 = /^\d{3}$/;
 	var reg2 = /^\d{4}$/;
 	if ((num0 == "") && (num1 == "") && (num2 == "")){
+		$("#txtPhone_0,#txtPhone_1,#txtPhone_2").addClass("required");
+		$("#form_phone").effect("shake");
+		$("#message_3").html('***Phone number should not be blank!***');
 		alert ("Phone number should not be blank!")
 		return false;
 	}
 		
 	if ((!(reg0.test(num0)))||(!(reg1.test(num1)))||(!(reg2.test(num2)))){
+		$("#txtPhone_0,#txtPhone_1,#txtPhone_2").addClass("required");
+		$("#form_phone").effect("shake");
+		$("#message_3").html('***Invalid phone number.***');
 		alert ("Invalid phone number.");
 		return false;
 	}
 	
 	// Test selector.
 	if (document.getElementById('selPosition').selectedIndex == 0){
+		$("#selPosition").addClass("required");
+		$("#selPosition").effect("shake");
+		$("#message_4").html('***You must select a flavor.***');
 		alert( "You must select a flavor." );
 		return false;
 	} else return true;
