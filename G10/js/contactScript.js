@@ -36,7 +36,7 @@ function validateForm(){
 	}
 	
 	// Test gender.
-	if ((document.getElementById('gender_1').checked != true) && (document.getElementById('gender_0').checked != true)){
+	if ((document.getElementById('gender_1').checked != true) && (document.getElementById('gender_0').checked != true) && (document.getElementById('gender_2').checked != true)){
 		$("#form_gender").effect("shake");
 		$("#message_1").html('***Please select gender.***');
 		alert("Please select gender.");
