@@ -1,22 +1,44 @@
+function resetFields() {
+$("input[type=text]").removeClass("required");
+$("#message,#message_1,#message_2").html("");
+}
+
 function validateForm(){
+	resetFields();
 	// Test name.
 	var firstName = document.getElementById('txtFirstName').value;
 	var lastName = document.getElementById('txtLastName').value;
-	var StrReg = "^[A-Z][a-z]*$";
+	var StrReg = "^[a-zA-Z]*$";
 	var regN = new RegExp(StrReg);
 	
-	if ((firstName == "") || (lastName == "")){
+	if (firstName == ""){
+		$("#txtFirstName").addClass("required");
+		$("#txtFirstName").effect("shake");
+		$("#message").html('***Please enter full name.***');
 		alert ("Please enter full name.")
 		return false;
 	}
 	
+	if (lastName == ""){
+		$("#txtLastName").addClass("required");
+		$("#txtLastName").effect("shake");
+		alert ("Please enter full name.")
+		$("#message").html('***Please enter full name.***');
+		return false;
+	}
+	
 	if ((!(regN.test(firstName))) || (!(regN.test(lastName)))){
+		$("#txtLastName,#txtFirstName").addClass("required");
+		$("#form_name").effect("shake");
+		$("#message").html('***Invalid Name***');
 		alert ("Invalid Name");
 		return false;
 	}
 	
 	// Test gender.
 	if ((document.getElementById('gender_1').checked != true) && (document.getElementById('gender_0').checked != true)){
+		$("#form_gender").effect("shake");
+		$("#message_1").html('***Please select gender.***');
 		alert("Please select gender.");
 		return false;
 	}
@@ -25,11 +47,17 @@ function validateForm(){
 	var email = document.getElementById('txtEmail').value;
 	var regEmail = /^\w+@\w+.com|.ca|.org$/;
 	if (email == ""){
+		$("#txtEmail").addClass("required");
+		$("#txtEmail").effect("shake");
+		$("#message_2").html('***Please enter your email address.***');
 		alert ("Please enter your email address.")
 		return false;
 	}
 		
 	if (!(regEmail.test(email))){
+		$("#txtEmail").addClass("required");
+		$("#txtEmail").effect("shake");
+		$("#message_2").html('***Invalid email address.***');
 		alert ("Invalid email address.")
 		return false;
 	}
@@ -57,3 +85,4 @@ function validateForm(){
 		return false;
 	} else return true;
 }
+

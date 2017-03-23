@@ -1,3 +1,26 @@
+.required 
+{
+border: solid 1px #f00;
+}
+
+#message {
+color:red;
+width:100%;
+margin:auto;
+}
+
+#message_1 {
+color:red;
+width:100%;
+margin:auto;
+}
+
+#message_2 {
+color:red;
+width:100%;
+margin:auto;
+}
+
 body {
 	background-color: #f8efdf;
 	font-family: "Lucida Grande", Verdana, sans-serif;
