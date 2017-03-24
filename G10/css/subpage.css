@@ -105,14 +105,14 @@ header {
 }
 
 @font-face{
-	font-family: myFirstFont;
-	src: url(AlexBrush-Regular.ttf);
+	font-family: 'myFirstFont';
+	src: url(../font/AlexBrush-Regular.ttf);
 
 }
 
 @font-face{
-	font-family: mySecondFont;
-	src: url(Attackofthecucumbers.ttf);
+	font-family: 'mySecondFont';
+	src: url(../font/Attackofthecucumbers.ttf);
 
 }
 
@@ -230,6 +230,8 @@ footer {
 }
 
 .left{
+	font-family:mySecondFont;
+	font-size:x-large;
 	width:30%;
 	height:400px;
 	margin-left:20%;
@@ -237,10 +239,19 @@ footer {
 	display:block;
 }
 
+.left a {
+	color: black;
+}
+
 .right{
+	font-family:mySecondFont;
+	font-size:x-large;
 	width:30%;
 	height:400px;
 	float:left;
 	dispaly:block;
 }
 
+.right a {
+	color: black;
+}
