@@ -1,6 +1,7 @@
 function resetFields() {
-$("input[type=text]").removeClass("required");
-$("#message,#message_1,#message_2").html("");
+$("input[type=text],input[type=tel]").removeClass("required");
+$("#selPosition").removeClass("required");
+$("#message,#message_1,#message_2,#message_3,#message_4").html("");
 }
 
 function validateForm(){
