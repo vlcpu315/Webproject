@@ -141,36 +141,15 @@ header {
 }
 
 
-
-} 
-
 @font-face{
 	font-family:myFirstFont;
-	src:url(AlexBrush-Regular.ttf);
+	src:url('../font/AlexBrush-Regular.ttf');
 	font-weight:bold;
 }
 
 @font-face{
 	font-family:mySecondFont;
-	src:url(attack of the cucumbers.ttf);
-	font-weight:bold;
-}
-
-@font-face{
-	font-family:myThirdFont;
-	src:url(attack of the cucumbers.ttf);
-	font-weight:bold;
-}
-
-@font-face{
-	font-family:myForthFont;
-	src:url(attack of the cucumbers.ttf);
-	font-weight:bold;
-}
-
-@font-face{
-	font-family:myFifthFont;
-	src:url(attack of the cucumbers.ttf);
+	src:url('../font/Attackofthecucumbers.ttf');
 	font-weight:bold;
 }
 
@@ -217,17 +196,17 @@ footer {
 	padding-top: 30px;
 	padding-bottom: 20px;
 }
-#copyright {
+.copyright {
 	text-align: center;
 	font-size:small;
 	color: white;
 	margin:0px;
 	top: 0px;
 }
-#copyright a {
+.copyright a {
 	color: white;
 	text-decoration: none;
 }
-#copyright a:hover{
+.copyright a:hover{
 	background-color: #0099CC;
 }

@@ -9,106 +9,105 @@
 		<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 	</head>
 	<body>
-	<div id="container">
-		<header>
-			<div class="banner">
-				<img src="image/Chihuo.Jpg" alt="Logo">WonderCNF
-			</div>
-			<div class="navbar">
-				 <ul>
-					<li><a href="index.html" class="border_first">Home</a></li>
-					<li>
-						<a href="Fiveflavors.html">Five Flavors</a>
-							 <ul>
+		<div id="container">
+			<header>
+				<div class="banner">
+					<img src="image/Chihuo.Jpg" alt="Logo">WonderCNF
+				</div>
+				<div class="navbar">
+					<ul>
+						<li><a href="index.html" class="border_first">Home</a></li>
+						<li><a href="Fiveflavors.html">Five Flavors</a>
+							<ul>
 								<li><a href="Sour.html">Sour</a></li>
 								<li><a href="Sweet.html">Sweet</a></li>
 								<li><a href="bitter.html">Bitter</a></li>
 								<li><a href="spicy.html">Spicy</a></li>
 								<li><a href="salty.html">Salty</a></li>
 							</ul>
-					</li>
-					<li><a href="Forum.html">Forum</a></li>
-					<li><a href="AboutUs.html">About Us</a></li>
-					<li><a href="Contact.html">Contact Us</a></li>
-				</ul>
-
-			</div>
-		</header>
-		<div class="contact">
-		  <br/>
-			<br/>
-			<div id="contus">
-				<img src="image/contactus.png" alt="contactus" width="450px" height="450px" onclick="validateForm() && form_contact.submit()">
-			</div>
+						</li>
+						<li><a href="Forum.html">Forum</a></li>
+						<li><a href="AboutUs.html">About Us</a></li>
+						<li><a href="Contact.html">Contact Us</a></li>
+					</ul>
+				</div>
+			</header>
+			<div class="contact">
+				<br>
+				<br>
+				<div id="contus">
+					<img src="image/contactus.png" alt="contactus" width="450" height="450" onclick="validateForm() && form_contact.submit()">
+				</div>
 				<form id="form_contact" name="contactForm" action="http://webdevfoundations.net/scripts/formdemo.asp" onsubmit="return validateForm()" method="post">
 					<fieldset id="form_name">
 						<label for="txtFirstName"><span class="question">Name</span><span class="star">&nbsp;*</span></label>
 						<br>
 						<div id="fn">
-						<input id="txtFirstName" type="text" name="firstname">
-                        <label for="txtFirstName"><span>First</span></label>	
+							<input id="txtFirstName" type="text" name="firstname">
+							<label for="txtFirstName"><span>First</span></label>	
                         </div>
 						<div id="ln">
-						<input id="txtLastName" type="text" name="lastname">
-						<label for="txtLastName"><span>Last</span></label>
+							<input id="txtLastName" type="text" name="lastname">
+							<label for="txtLastName"><span>Last</span></label>
 						</div>
 						<div id="message"></div>
 					</fieldset>
 					<fieldset id="form_gender">
-                     <label><span class="gender"><span class="question">Gender</span><span class="star">&nbsp;*</span></label>
-                     <br><input id="gender_0" type="radio" name="gender" value="Male" > <label for="gender_0">Male</label>
-					 <input id="gender_1" type="radio" name="gender" value="Female" > <label for="gender_1">Female</label>
-					 <input id="gender_2" type="radio" name="gender" value="Others" > <label for="gender_2">Others</label>
-					 <div id="message_1"></div>
-                  </fieldset>
-				  <fieldset id="form_email">
-                     <label for="txtEmail"><span class="question">Email Address</span><span class="star">&nbsp;*</span></label>
-                     <br><input id="txtEmail" type="text" name="email">
-					 <div id="message_2"></div>
-                  </fieldset>
-				  <fieldset id="form_phone">
-                     <label for="txtPhone_0"><span class="question">Phone</span><span class="star">&nbsp;*</span></label>
-                     <br>
-                     <div id="First3">
-                        <input id="txtPhone_0" type="tel" name="Mobile" maxlength="3">&nbsp;-
-                        <label for="txtPhone_0"><span>(***)</span></label>
-                     </div>
-                     <div id="Second3">
-                        <input id="txtPhone_1" type="tel" name="Mobile" maxlength="3">&nbsp;-
-                        <label for="txtPhone_1"><span>***</span></label>
-                     </div>
-                     <div id="Last4">
-                        <input id="txtPhone_2" type="tel" name="Mobile" maxlength="4">
-                        <label for="txtPhone_2"><span>****</span></label>
-                     </div>
-					 <div id="message_3"></div>
-                  </fieldset>
-				  <fieldset id="form_sel">
-                     <label for="selPosition"><span class="question">Which flavor are you interested in?</span><span class="star">&nbsp;*</span></label>
-                     <br>
-                     <select id="selPosition">
-					    <option value="blank">-- Select an opition --</option>
-                        <option value="sour">Sour</option>
-                        <option value="sweet">Sweet</option>
-                        <option value="bitter">Bitter</option>
-                        <option value="spicy">Spicy</option>
-						<option value="salty">Salty</option>
-                     </select>
-					 <div id="message_4"></div>
-                  </fieldset>
-				  <fieldset id="form_comments">
-                     <div id="inf">
-                        <label for="taComments"><span class="question">Any additional information for us</span></label>
-                        <br><textarea id="taComments" rows="10" cols="50" name="comment"></textarea>
-                        <br><br><input id="submit_b" type="submit" value="Submit">
-                     </div>
-                  </fieldset>
+						<label><span class="question">Gender</span><span class="star">&nbsp;*</span></label>
+						<br><input id="gender_0" type="radio" name="gender" value="Male" > <label for="gender_0">Male</label>
+						<input id="gender_1" type="radio" name="gender" value="Female" > <label for="gender_1">Female</label>
+						<input id="gender_2" type="radio" name="gender" value="Others" > <label for="gender_2">Others</label>
+						<div id="message_1"></div>
+					</fieldset>
+					<fieldset id="form_email">
+						<label for="txtEmail"><span class="question">Email Address</span><span class="star">&nbsp;*</span></label>
+						<br><input id="txtEmail" type="text" name="email">
+						<div id="message_2"></div>
+					</fieldset>
+					<fieldset id="form_phone">
+						<label for="txtPhone_0"><span class="question">Phone</span><span class="star">&nbsp;*</span></label>
+						<br>
+						<div id="First3">
+							<input id="txtPhone_0" type="tel" name="Mobile" maxlength="3">&nbsp;-
+							<label for="txtPhone_0"><span>(***)</span></label>
+						</div>
+						<div id="Second3">
+							<input id="txtPhone_1" type="tel" name="Mobile" maxlength="3">&nbsp;-
+							<label for="txtPhone_1"><span>***</span></label>
+						</div>
+						<div id="Last4">
+							<input id="txtPhone_2" type="tel" name="Mobile" maxlength="4">
+							<label for="txtPhone_2"><span>****</span></label>
+						</div>
+						<div id="message_3"></div>
+					</fieldset>
+					<fieldset id="form_sel">
+						<label for="selPosition"><span class="question">Which flavor are you interested in?</span><span class="star">&nbsp;*</span></label>
+						<br>
+						<select id="selPosition">
+							<option value="blank">-- Select an opition --</option>
+							<option value="sour">Sour</option>
+							<option value="sweet">Sweet</option>
+							<option value="bitter">Bitter</option>
+							<option value="spicy">Spicy</option>
+							<option value="salty">Salty</option>
+						</select>
+						<div id="message_4"></div>
+					</fieldset>
+					<fieldset id="form_comments">
+						<div id="inf">
+							<label for="taComments"><span class="question">Any additional information for us</span></label>
+							<br><textarea id="taComments" rows="10" cols="50" name="comment"></textarea>
+							<br><br><input id="submit_b" type="submit" value="Submit">
+						</div>
+					</fieldset>
+				</form>
 			</div>
-			
-		<footer>
-			<P id="copyright"><a href="Sitemap.html">Site Map</a></P>
-			</br>
-			<p id="copyright">Copyright &copy; 2017 Group 10 | Designed by <a href="AboutUs.html">Victor</a>, <a href="AboutUs.html">Samuel</a>, <a href="AboutUs.html">Grace</a>, <a href="AboutUs.html">Bob</a></p>
-		</footer>
-	</div>
+			<footer>
+				<P class="copyright"><a href="Sitemap.html">Site Map</a></P>
+				<br>
+				<p class="copyright">Copyright &copy; 2017 Group 10 | Designed by <a href="AboutUs.html">Victor</a>, <a href="AboutUs.html">Samuel</a>, <a href="AboutUs.html">Grace</a>, <a href="AboutUs.html">Bob</a></p>
+			</footer>
+		</div>
 	</body>
+</html>
