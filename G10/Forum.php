@@ -33,16 +33,12 @@
 		</header>
 
 <div id="forumTable">
-			<?php
-			if (isLoggedIn()){
-				session_start();
-                echo $_SESSION['User_ID'];
-				echo '<a href="logout.php">Logout</a><br/>';
-			} else {
+			<div id = "login">
+				<?php
 				echo '<a href="login_form.php">Login</a><br/>';
 				echo '<a href="register_form.php">New user?</a>';
-			}
-			?>
+				?>
+			</div>
             <table>
             <tr>
             <td class="forumtd1"><strong>#</strong></td>

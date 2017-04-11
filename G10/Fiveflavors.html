@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <link href="css/Fiveflavors.css" rel="stylesheet">
+<script type="text/javascript" src="js/fiveflavorsScript.js"></script>
 <title>Fiveflavors</title>
 </head>
 	<body>
@@ -25,7 +26,7 @@
 								<li><a href="salty.html">Salty</a></li>
 							</ul>
 						</li>
-						<li><a href="Forum.html">Forum</a></li>
+						<li><a href="Forum.php">Forum</a></li>
 						<li><a href="AboutUs.html">About Us</a></li>
 						<li><a href="Contact.html">Contact Us</a></li>
 					</ul>
@@ -37,23 +38,23 @@
 				<div class="fiveflavors">
 					<!--sour-->
 					<div class="sour">
-						<a href="Sour.html"><img src="image/sweet.jpg" alt="sour"></a>
+						<a href="Sour.html" onmouseover = "sour()" onmouseout = "leave()"><img src="image/sour.jpg" alt="sour"></a>
 					</div>
 					<!--sweet-->
 					<div class="sweet">
-						<a href="Sweet.html"><img src="image/sweet.jpg" alt="sweet"></a>
+						<a href="Sweet.html" onmouseover = "sweet()" onmouseout = "leave()"><img src="image/sweet.jpg" alt="sweet"></a>
 					</div>
 					<!--bitter-->
-					<div class="bitter">
-						<a href="bitter.html"><img src="image/sweet.jpg" alt="bitter"></a>
+					<div class="bitter" >
+						<a href="bitter.html" onmouseover = "bitter()" onmouseout = "leave()"><img src="image/bitter.jpg" alt="bitter"></a>
 					</div>
 					<!--spicy-->
 					<div class="spicy">
-						<a href="spicy.html"><img src="image/sweet.jpg" alt="spicy"></a>
+						<a href="spicy.html" onmouseover = "spicy()" onmouseout = "leave()"><img src="image/spicy.jpg" alt="spicy"></a>
 					</div>
 					<!--salty-->
 					<div class="salty">
-						<img src="image/sweet.jpg" alt="salty">
+						<a href="bitter.html" onmouseover = "salty()" onmouseout = "leave()"><img src="image/salty.jpg" alt="salty">
 						<div class="overlay">
 							<h2>Hover effect 1</h2>
 								<a class="info" href="salty.html">link here</a>
@@ -63,14 +64,10 @@
 				<div class="clear">
 				</div>
 				<!--text-->
-				<div class="text">
+				<div id="text" class="text">
 				<!--invoke Javascript-->
-				<h2>Five Flavors</h2>
-				<p>A number of different styles contribute to Chinese cuisine but perhaps the best known and most influential are Cantonese cuisine, Shandong cuisine, Jiangsu cuisine (specifically Huaiyang cuisine) and Sichuan cuisine. These styles are distinctive from one another due to factors such as availability of resources, climate, geography, history, cooking techniques and lifestyle. One style may favour the use of garlic and shallots over chili and spices, while another may favour preparing seafood over other meats and fowl. Jiangsu cuisine favours cooking techniques such as braising and stewing, while Sichuan cuisine employs baking.
-
-				Based on the raw materials and ingredients used, the method of preparation and cultural differences, a variety of foods with different flavors and textures are prepared in different regions of the country. Many traditional regional cuisines rely on basic methods of preservation such as drying, salting, pickling and fermentation.
-
-				Cooking is an art, recipes sprout out of creativity and imagination or even borrowing a leaf from other cultures.</p>
+				<h2>Five Flavors</h2><br>
+				<p>A number of different styles contribute to Chinese cuisine but perhaps the best known and most influential are Cantonese cuisine, Shandong cuisine, Jiangsu cuisine (specifically Huaiyang cuisine) and Sichuan cuisine. These styles are distinctive from one another due to factors such as availability of resources, climate, geography, history, cooking techniques and lifestyle. One style may favour the use of garlic and shallots over chili and spices, while another may favour preparing seafood over other meats and fowl. Jiangsu cuisine favours cooking techniques such as braising and stewing, while Sichuan cuisine employs baking.<br>Based on the raw materials and ingredients used, the method of preparation and cultural differences, a variety of foods with different flavors and textures are prepared in different regions of the country. Many traditional regional cuisines rely on basic methods of preservation such as drying, salting, pickling and fermentation.<br>Cooking is an art, recipes sprout out of creativity and imagination or even borrowing a leaf from other cultures.</p>
 				</div>
 			</div>
 			<!--footer-->
