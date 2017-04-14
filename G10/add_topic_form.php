@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -25,7 +29,7 @@
 								<li><a href="salty.html">Salty</a></li>
 							</ul>
 					</li>
-					<li><a href="Forum.html">Forum</a></li>
+					<li><a href="Forum.php">Forum</a></li>
 					<li><a href="AboutUs.html">About Us</a></li>
 					<li><a href="Contact.html">Contact Us</a></li>
 				</ul>
@@ -33,13 +37,52 @@
 		</header>
 
 <div id="forumTable">
+<<<<<<< HEAD:G10/add_topic_form.php
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+<tr>
+<form id="form1" name="form1" method="post" action="add_topic.php">
+<td>
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
+<tr>
+<td colspan="3" bgcolor="#E6E6E6"><strong>Create New Topic</strong> </td>
+</tr>
+<tr>
+<td width="14%"><strong>Topic</strong></td>
+<td width="2%">:</td>
+<td width="84%"><input name="topic" type="text" id="topic" size="50" /></td>
+</tr>
+<tr>
+<td valign="top"><strong>Detail</strong></td>
+<td valign="top">:</td>
+<td><textarea name="detail" cols="50" rows="3" id="detail"></textarea></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><input type="submit" name="Submit" value="Submit" /> <input type="reset" name="Submit2" value="Reset" /></td>
+</tr>
+</table>
+</td>
+</form>
+</tr>
+</table>
+=======
+			<?php
+			if (isLoggedIn()){
+				session_start();
+                echo $_SESSION['User_ID'];
+				echo '<a href="logout.php">Logout</a><br/>';
+			} else {
+				echo '<a href="login_form.php">Login</a><br/>';
+				echo '<a href="register_form.php">New user?</a>';
+			}
+			?>
             <table>
             <tr>
             <td class="forumtd1"><strong>#</strong></td>
             <td class="forumtd2"><strong>Topic</strong></td>
             <td class="forumtd2"><strong>Date/Time</strong></td>
             </tr>
-
 			<tr>
             <td>1</td>
             <td><a href="#">Coming Soon!</a><BR></td>
@@ -66,9 +109,11 @@
             <td>16/02/17 03:31:04</td>
             </tr>
 			<tr>
-            <td colspan="3" class="forumtd4"><a href="#"><strong>Create New Topic</strong> </a></td>
+			<td colspan="3" class="forumtd4"><a href="#"><strong>Create New Topic</strong> </a></td>
+			</td>
             </tr>
             </table>
+>>>>>>> origin/master:G10/Forum.html
 </div>
 
 
@@ -80,3 +125,4 @@
 		</footer>
 </div>
 </body>
+</html>
