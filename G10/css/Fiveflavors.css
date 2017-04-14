@@ -112,21 +112,18 @@ header {
 
 
 h1{
-	font-family: myFirstFont;
 	font-size:xx-large;
 	text-align:left;
 }
 
 h2 {
-	font-family: mySecondFont;
 	font-size:x-large;
 	text-align:left;
 }
 
 h3 {
-	font-family: mySecondFont;
 	font-size:x-large;
-text-align:left;
+	text-align:left;
 }
 
 p {
@@ -316,12 +313,11 @@ transition-delay:.2s;
 	padding-left: 50px;
 }
 
-.text p {
-	font-family: mySecondFont;
-	
-}
 
 .text h2 {
 	text-align:center;
 	font-family: mySecondFont;
+}
+p.big {
+    line-height: 200%;
 }

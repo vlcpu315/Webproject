@@ -143,7 +143,7 @@ header {
 
 @font-face{
 	font-family:myFirstFont;
-	src:url('../font/AlexBrush-Regular.ttf');
+	src:url('../font/Attackofthecucumbers.ttf');
 	font-weight:bold;
 }
 
@@ -155,13 +155,13 @@ header {
 
 
 h1{
-	font-family:”myFirstFont”;
+	font-family:myFirstFont;
 	font-size:xx-large;
 	text-align:center;
 }
 
 h2 {
-	font-family:”mySecondFont”;
+	font-family:myFirstFont;
 	font-size:x-large;
 	text-align:center;
 }
