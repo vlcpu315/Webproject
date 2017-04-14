@@ -25,7 +25,7 @@
 								<li><a href="salty.html">Salty</a></li>
 							</ul>
 					</li>
-					<li><a href="Forum.html">Forum</a></li>
+					<li><a href="Forum.php">Forum</a></li>
 					<li><a href="AboutUs.html">About Us</a></li>
 					<li><a href="Contact.html">Contact Us</a></li>
 				</ul>
@@ -34,47 +34,63 @@
 
 <div id="forumTable">
 			<div id = "login">
-				<?php
-				echo '<a href="login_form.php">Login</a><br/>';
-				echo '<a href="register_form.php">New user?</a>';
-				?>
+<?php
+session_start();
+if (isset($_SESSION['user'])){
+echo $_SESSION['user']."<br>";
+echo '<a href="logout.php">Logout</a><br/>';
+echo '>><a href="add_topic_form.php">Create new topic</a>';
+} else {
+echo '<a href="login_form.php">Login</a><br/>';
+echo '<a href="register_form.php">New user?</a>';
+}
+?>
 			</div>
-            <table>
-            <tr>
-            <td class="forumtd1"><strong>#</strong></td>
-            <td class="forumtd2"><strong>Topic</strong></td>
-            <td class="forumtd2"><strong>Date/Time</strong></td>
-            </tr>
-			<tr>
-            <td>1</td>
-            <td><a href="#">Coming Soon!</a><BR></td>
-            <td>16/02/17 03:31:04</td>
-            </tr>
-			<tr>
-            <td>2</td>
-            <td><a href="#">Coming Soon!</a><BR></td>
-            <td>16/02/17 03:31:04</td>
-            </tr>
-			<tr>
-            <td>3</td>
-            <td><a href="#">Coming Soon!</a><BR></td>
-            <td>16/02/17 03:31:04</td>
-            </tr>
-			<tr>
-            <td>4</td>
-            <td><a href="#">Coming Soon!</a><BR></td>
-            <td>16/02/17 03:31:04</td>
-            </tr>
-			<tr>
-            <td>5</td>
-            <td><a href="#">Coming Soon!</a><BR></td>
-            <td>16/02/17 03:31:04</td>
-            </tr>
-			<tr>
-			<td colspan="3" class="forumtd4"><a href="#"><strong>Create New Topic</strong> </a></td>
-			</td>
-            </tr>
-            </table>
+<table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+<tr>
+<td width="6%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
+<td width="53%" align="center" bgcolor="#E6E6E6"><strong>Topic</strong></td>
+<td width="6%" align="center" bgcolor="#E6E6E6"><strong>Date/Time</strong></td>
+<td width="7%" align="center" bgcolor="#E6E6E6"><strong>Name</strong></td>
+</tr>
+
+<?php
+$con = mysqli_connect("localhost","id1306901_g10","Victor912","id1306901_db_user");
+$sql = "SELECT reg_date, id, User, Topic FROM Topic";
+$result = mysqli_query($con, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+?>
+
+<tr>
+<td bgcolor="#FFFFFF"><?php echo $row['id']; ?></td>
+<td bgcolor="#FFFFFF"><a href="view_topic.php?id=<?php echo $row['id']; ?>"><?php echo $row['Topic']; ?></a><BR></td>
+<td align="center" bgcolor="#FFFFFF"><?php echo $row['reg_date'];?></td>
+<td align="center" bgcolor="#FFFFFF"><?php echo $row['User'];?></td>
+</tr>
+
+<?php
+// Exit looping and close connection
+
+    }
+} else {
+    echo "0 results";
+}
+mysqli_close($con);
+?>
+<tr>
+<td colspan="5" align="right" bgcolor="#E6E6E6"><?php
+if (isset($_SESSION['user'])){
+echo '>><a href="add_topic_form.php">Create new topic</a>';
+} else {
+echo '<a href="login_form.php">Login</a><br/>';
+echo '<a href="register_form.php">New user?</a>';
+}
+?></td>
+</tr>
+</table>
 </div>
 
 

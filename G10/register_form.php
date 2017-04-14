@@ -7,6 +7,44 @@
 		<title>WonderCNF</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/forum.css">
+                
+                <script src = "http://code.jquery.com/jquery-1.10.2.js"></script>
+                <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		
+                <script type = "text/javascript">
+		function resetFields() {
+		$("#message").html("");
+		}
+		
+		
+		function formValidate() {
+		resetFields();
+		var User_Name = document.getElementById('login').value;
+
+		if (User_Name == "") {
+		$("#login").effect("shake");
+		$("#message").html('User name could not be empty.');
+		return false;
+		}
+
+		var Passwd = document.getElementById('password').value;
+		var PasswdC = document.getElementById('cpassword').value;
+		if (Passwd == ""){
+		$("#password").effect("shake");
+		$("#message").html('Password could not be empty.');
+		return false;
+		}
+		
+		if (PasswdC != Passwd){
+		$("#cpassword").effect("shake");
+		$("#message").html('Inconsistent password.');
+		return false;
+		}
+		
+		return true;
+	
+		}
+		</script>
 </head>
 	<body>
 	<div id="container">
@@ -46,11 +84,11 @@
 	}
 ?>
 
-<form id="registerForm" name="registerForm" method="post" action="register.php">
+<form id="registerForm" name="registerForm" method="post" action="register.php" onsubmit="return formValidate()">
   <table width="300" border="0" align="center" cellpadding="2" cellspacing="0">
 
     <tr>
-      <th width="124">Login</th>
+      <th width="124">User Name</th>
       <td width="168"><input name="login" type="text" class="textfield" id="login" /></td>
     </tr>
     <tr>
@@ -66,6 +104,7 @@
       <td><input type="submit" name="Submit" value="Register" /></td>
     </tr>
   </table>
+<div id = "message"></div>
 </form>
 
 </div>

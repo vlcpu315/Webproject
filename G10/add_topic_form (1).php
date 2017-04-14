@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -33,42 +37,30 @@
 		</header>
 
 <div id="forumTable">
-<?php
-session_start();
-$servername = "localhost";
-$username = "id1306901_g10";
-$password = "Victor912";
-$dbname = "id1306901_db_user";
-// Create connection
-$con = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$con) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-	$tbl_name="Topic"; // Table name
-
-	// get value of id that sent from address bar
-	$id=$_GET['id'];
-
-	$sql="SELECT id, User, Topic, Detail, reg_date FROM $tbl_name WHERE id='$id'";
-	$result=mysqli_query($con, $sql);
-
-	$row=mysqli_fetch_array($result);
-?>
-<table width="100%" border="0" cellpadding="3" cellspacing="1" bordercolor="1" bgcolor="#FFFFFF">
+<form id="form1" name="form1" method="post" action="add_topic.php">
+<td>
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
 <tr>
-<td bgcolor="#F8F7F1"><strong><?php echo $row['Topic']; ?></strong></td>
+<td colspan="3" bgcolor="#E6E6E6"><strong>Create New Topic</strong> </td>
 </tr>
 <tr>
-<td bgcolor="#F8F7F1"><?php echo $row['Detail']; ?></td>
+<td width="14%"><strong>Topic</strong></td>
+<td width="2%">:</td>
+<td width="84%"><input name="topic" type="text" id="topic" size="50" /></td>
 </tr>
 <tr>
-<td bgcolor="#F8F7F1"><strong>By : <?php echo $row['User']; ?></strong> <strong></td>
+<td valign="top"><strong>Detail</strong></td>
+<td valign="top">:</td>
+<td><textarea name="detail" cols="50" rows="3" id="detail"></textarea></td>
 </tr>
 <tr>
-<td bgcolor="#F8F7F1"><strong>Date/time : </strong><?php echo $row['reg_date']; ?></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><input type="submit" name="Submit" value="Submit" /> <input type="reset" name="Submit2" value="Reset" /></td>
 </tr>
 </table>
+</td>
+</form>
 </div>
 
 
